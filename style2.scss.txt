@@ -1,0 +1,20 @@
+@mixin barder-radious($radious)
+{
+border-radious:$radious;
+}
+.box1 {
+background-color:$box1-color-blue;
+@include border-radious(10px 20px 30px);
+color:$text-color;
+padding:40px;
+}
+.box2 {
+background-color:$box2-color-red;
+@include border-radious(10px 20px 30px);
+@extend.box1;
+}
+.box3 {
+background-color:$box3-color-orange;
+@include border-radious(10px 20px 30px);
+@extend.box1;
+}
